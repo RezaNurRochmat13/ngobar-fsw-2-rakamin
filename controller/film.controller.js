@@ -7,6 +7,7 @@ const router = express.Router()
 router.get('/api/films', async (request, response) => {
   const films = await db.sequelize.query('SELECT * FROM film', { type: QueryTypes.SELECT });
 
+
   return response.json({data: films})
 })
 
